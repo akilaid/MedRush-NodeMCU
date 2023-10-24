@@ -8,7 +8,7 @@
 #include <EEPROM.h>
 #include "emptyTrays.h"
 #include "saveDoseTime.h"    //saveDoseTime.h header file
-#include "doseTimeChecker.h" // doseTimeChecker.h header file
+#include "doseTimeChecker.h" // doseTimeChecker.h header filel
 #include <SoftwareSerial.h>
 
 const char * mqttServer = "168.138.30.76";
