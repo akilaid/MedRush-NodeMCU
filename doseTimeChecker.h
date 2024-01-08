@@ -6,7 +6,8 @@
 
 SoftwareSerial NodeMCU(D3, D4); // RX, TX
 
-struct ts t;
+ThreeWire myWire(D2, D1, D0); // DAT, CLK, RST
+RtcDS1302<ThreeWire> Rtc(myWire);
 
 // Define flags to track whether the commands have been sent
 bool morningPillCommandSent = false;
@@ -24,13 +25,14 @@ void resetFlags()
 void printMedicineData()
 {
 
-  DS3231_get(&t);
+  RtcDateTime now = Rtc.GetDateTime();
 
-  int currentHour = t.hour;
-  int currentMinute = t.min;
 
-  // Serial.println(currentHour);
-  // Serial.println(currentMinute);
+  int currentHour = now.Hour();
+  int currentMinute = now.Minute();
+
+//   Serial.println(currentHour);
+//   Serial.println(currentMinute);
   // Call the function to reset the flags at the beginning of the day
   delay(500);
 
