@@ -14,15 +14,11 @@
 #include <DHT.h>
 
 DHT dht;
-const char *mqttServer = "168.138.30.76";
-const int mqttPort = 8883;
-const char *mqttUser = "akila";
-const char *mqttPassword = "akilamqtt67";
 
-// const char * mqttServer = "sg.akilaid.tech";
-// const int mqttPort = 8883;
-// const char * mqttUser = "akila";
-// const char * mqttPassword = "Medrush345ewqA";
+const char * mqttServer = "sg.akilaid.tech";
+const int mqttPort = 8883;
+const char * mqttUser = "user";
+const char * mqttPassword = "password";
 
 // char medicineData[256]; // Global variable to store medicineData
 char medicineTimeData[256];
